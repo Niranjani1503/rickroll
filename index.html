@@ -6,12 +6,22 @@
 </head>
 <body>
 
-  <h2>Happy Birthday Lohith🥳</h2>
+  <h2>Happy Birthday Lohith 🥳</h2>
 
-  <video width="640" height="360" autoplay muted controls>
+  <video id="bdayVideo" width="640" height="360" autoplay muted controls>
     <source src="rickroll.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <script>
+    const video = document.getElementById('bdayVideo');
+
+    document.body.addEventListener('click', () => {
+      video.muted = false;
+      video.volume = 1.0;
+      video.play();
+    }, { once: true }); // runs only once
+  </script>
 
 </body>
 </html>
